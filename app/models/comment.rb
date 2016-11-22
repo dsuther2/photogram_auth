@@ -9,4 +9,11 @@ class Comment < ActiveRecord::Base
   #body: presence
   validates :body, :presence => true
 
+  #associations
+  #Photos have many comments, a comment belongs to a photo
+  belongs_to :photo
+
+  #Users have many comments, a comment belongs to a user
+  belongs_to :user
+
 end
